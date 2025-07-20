@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+---
+<main>
+    <section class="desserts p-6 border-2 border-orange-300">
+        <div class="desserts-content">
+            <h1 class="desserts__title text-rose-900 font-bold text-[40px] leading-[1.2] mb-8">Desserts</h1>
+            <!-- <DessertHandler client:load /> -->
+            <section id="dessertsContent" class="desserts__options grid gap-[24px]">
+                <!-- <div class="desserts__option">
+                    <figure class="desserts__picture relative">
+                        <img class="desserts__img w-full rounded-[8px]" src="/images/image-waffle-mobile.jpg" alt="Waffle">
+                        <div class="desserts__add-remove flex items-center justify-center gap-2 border-[1px] border-rose-400 bg-white rounded-4xl w-[160px] py-3 absolute bottom-0 left-[50%] -translate-x-[50%] translate-y-[50%]">
+                            <img src="/images/icon-add-to-cart.svg" alt="Add Cart">
+                            <p class="desserts__text-add font-semibold text-[14px] text-rose-900">Add to Cart</p>
+                        </div>
+                    </figure>
+                    <div class="desserts__information mt-[44px]">
+                        <h4 class="desserts__subtitle text-[14px] font-normal text-rose-500">Waffle</h4>
+                        <h3 class="desserts__title font-semibold text-[16px] text-rose-900">Waffle with Berries</h3>
+                        <h3 class="desserts__price font-semibold text-[16px] text-red">$ 6.50</h3>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+        <div class="desserts__cart mt-8 md:mt-0 p-6 rounded-[12px] bg-white">
+            <h3 class="desserts__title-cart font-bold text-2xl text-red mb-6">Your Cart (<span class="desserts__number">0</span>)</h3>
+            <figure class="desserts__figure">
+                <img class="block mx-auto" src="/images/illustration-empty-cart.svg" alt="Empty">
+                <p class="desserts__message-empty font-semibold text-rose-500 text-[14px] text-center mt-[16px]">Your added items will appear here</p>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="/js/DessertHandler.js"></script>
