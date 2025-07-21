@@ -4,9 +4,9 @@
         "subtitle": "Waffle",
         "price": 6.50,
         "image": {
-            "mobile": "/images/image-waffle-mobile.jpg" ,
-            "tablet": "/image-waffle-tablet.jpg",
-            "desktop": "/image-waffle-desktop.jpg" 
+            "mobile": "/images/image-waffle-mobile.jpg",
+            "tablet": "/images/image-waffle-tablet.jpg",
+            "desktop": "/images/image-waffle-desktop.jpg" 
         }
     },
     {

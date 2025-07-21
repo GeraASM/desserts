@@ -1,9 +1,38 @@
+type Option = {
+  mobile: string;
+  tablet: string;
+  desktop: string;
+}
+type Dessert = {
+  title: string;
+  subtitle: string;
+  price: number;
+  image: Option;
+}
+
+let desserts: Dessert[] = [];
+function whatImage(options: Dessert[]) {
+  let images = document.querySelectorAll<HTMLImageElement>(".desserts__img");
+  images.forEach((img, index) => {
+    if (img) {
+      if (window.innerWidth < 768) {
+          img.src = options[index].image.mobile;
+      } else if (1024 > window.innerWidth && window.innerWidth >= 768 ) {
+          img.src = options[index].image.tablet;
+      } else {
+          img.src = options[index].image.desktop;
+      }
+    }
+    
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const dessertsContent = document.getElementById("dessertsContent");
 
   if (!dessertsContent) return;
 
-  fetch("/dresserts.json")
+  fetch("/desserts.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Not found dresserts");
@@ -11,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return response.json();
     })
     .then((data) => {
-      console.log("All correct!", data);
+      desserts = data;
       data.forEach((dessert: any) => {
         const section = document.createElement("section");
         section.className = "desserts__option";
@@ -31,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         dessertsContent.appendChild(section);
       });
+      // Llama a whatImage después de renderizar
+      whatImage(desserts);
+
+      // Solo agrega el listener ahora
+      window.addEventListener("resize", () => whatImage(desserts));
     })
     .catch((err) => {
       console.error("Error loading desserts:", err);

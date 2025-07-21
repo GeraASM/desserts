@@ -2,11 +2,11 @@
 import "../styles/global.css";
 ---
 <main>
-    <section class="desserts p-6 border-2 border-orange-300">
-        <div class="desserts-content">
+    <section class="desserts p-6 md:p-10 border-2 xl:p-[88px] border-orange-300 xl:flex xl:gap-8 xl:items-start xl:justify-center">
+        <div class="desserts-content xl:max-w-[800px]">
             <h1 class="desserts__title text-rose-900 font-bold text-[40px] leading-[1.2] mb-8">Desserts</h1>
             <!-- <DessertHandler client:load /> -->
-            <section id="dessertsContent" class="desserts__options grid gap-[24px]">
+            <section id="dessertsContent" class="desserts__options grid gap-[24px] md:grid-cols-3">
                 <!-- <div class="desserts__option">
                     <figure class="desserts__picture relative">
                         <img class="desserts__img w-full rounded-[8px]" src="/images/image-waffle-mobile.jpg" alt="Waffle">
@@ -23,7 +23,7 @@ import "../styles/global.css";
                 </div> -->
             </section>
         </div>
-        <div class="desserts__cart mt-8 md:mt-0 p-6 rounded-[12px] bg-white">
+        <div class="desserts__cart mt-8 xl:mt-0 xl:w-[384px] p-6 rounded-[12px] bg-white">
             <h3 class="desserts__title-cart font-bold text-2xl text-red mb-6">Your Cart (<span class="desserts__number">0</span>)</h3>
             <figure class="desserts__figure">
                 <img class="block mx-auto" src="/images/illustration-empty-cart.svg" alt="Empty">
